@@ -1,0 +1,96 @@
+ Bug Bounty Hunters Methodology v4  
+							-@Jhaddix (Jason, 28)
+. 
+.
+ Recon and Application Methodology
+ Note Taking: Xmind
+ Project tracting is essential
+ 
+ Xmind: notes and subnotes - mindmaps
+ project Tesla
+ 
+ 
+ 1) Finding Seeds/ Roots
+	Bugcrowd/Tesla
+	Wide Recon : Understand the company - use crunchbase - automate using api - find acquisitions by the company - Twich is acquired by Verison, Revlo acquired by Twich
+	
+	Search for ASN of an org - Autonomous system numbers - bgp.he.net - check IPV4/IPV6
+	ASN automation from cmd line: asnlookup tool/ Metabigor tool
+	
+	Enumeration of ASN - with AMASS - feed amass with an ASN number 
+	amass intel -asn <number>
+	This gives more seed data to add
+	
+	Reverse WhoIs  - with whoxy.com - has free api key
+	Pulls up who owned the company in the past
+	see other domains
+	Reverse WhoIs - with Domlink - domlink.py
+	
+	Ad/Analytics Relationships - with builtwith.com
+	find more seeds
+	
+	other tools to find top level Domains:
+	Google Fu - get more seed domains by search copyrights or somthing
+	
+	Shodan - **for IOT stuff - unsecure**
+	
+ 2)Finding Sub Domains
+	Subdomain enumeration:
+	link and Javascript discovery
+	Subdomain scraping
+	subdomain bruteforce
+	
+	Linked Discovery - with Burpsuite (PRO)
+	target scope - 
+	select all and spider them all to see if any return twhich in their home page
+	
+	^ automate that
+	spider?
+	Gospider and hakrawler
+	
+	Subdomainizer - for subdomain enumeration
+	subscraper - scans subdomains with recursion
+	
+	Subdomain Scraping:
+	next gen tools to find sub domains
+	use google: site:twhich.tv -www.twhich.tv
+	use AMASS and Subfinder tools for scraping subdomain data
+	
+	github enumeration :  uses our github token, gives subdomains found in github
+	use github-search repo
+	
+	soshubgo
+	
+	scraping in cloud ranges:
+	bufferover.run
+	
+	Subdomain Bruteforce:
+	shuffleDNS tool
+	
+	Alteration Scanning
+	
+	Port Scanning:
+	nmap
+	masscan - a faster tool
+	check for open ports
+	then use nmap on the open ports
+	dnmasscan to get ip to feed to masscan
+	
+	Service Scanning:
+	Brutespray for default passwords
+	
+	Github Dorking
+	jhaddix github dorking collection
+	
+	Screenshotting:
+		eyewitness, Aquatone, httpscreenshot
+.		
+
+	SubDomain Takeover:
+	  can I takeover xyz on github
+	  SubOver and nuclei
+	
+	
+ Automation ++
+     Interlace tool
+	 tools by Tomnomnom
