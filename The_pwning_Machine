@@ -1,0 +1,21 @@
+The pwning machine:
+				 - bitk_
+				 
+common: injection in code, LDAP
+
+exploit callback - make a call back to server when the exploit is success
+
+XSS Hunter
+
+github pages
+
+docker?
+curl?
+
+Tools:
+RequestBin
+transfer.bi.tk
+CodiMD
+
+
+create a docker machine
